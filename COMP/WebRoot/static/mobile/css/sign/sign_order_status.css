@@ -1,0 +1,50 @@
+@charset "utf-8";
+textarea{resize:none;}
+[class^="iconfont"]:before, [class*=" icon-"]:before{ vertical-align:top;}
+.t_green{ color:#5fc052;}
+.f_30{ font-size:3rem;}
+.mtb8{ margin-top:8px; margin-bottom:8px;}
+.wp45{ width:45%;}
+
+input[type="radio"]:checked + .icon-jjshxuanzhong{ color:#fd741c;}
+.border_box{ box-sizing:border-box; -webkit-box-sizing:border-box;}
+select,textarea{ -webkit-appearance:none; border-radius:0;}
+.pro_refund .img{ width:35%;}
+.pro_refund .img img{ border-radius:5px;}
+.pro_refund .info{ width:65%;}
+.pro_refund .info .name{ height:2.714285714285714rem; overflow:hidden;}
+.re_cash a{ position:absolute; top:0; right:0;}
+.re_cash>li>div{ position:relative;}
+.re_cash .sel_in{ width:100%; height:100%; position:absolute; top:0; right:0; opacity:0;}
+
+.upload{ border:2px dotted #cccccc;}
+.upload2{ border:none;}
+.upload .img_li{ width:4rem; height:4rem; margin-right:12px; position:relative;}
+.upload .img_li img{ vertical-align:middle; max-width:100%; max-height:100%;}
+.upload .img_li .t-cell-css{ width:4rem; height:4rem; overflow:hidden;}
+.upload .icon-shanchuanniu{ position: absolute; right:-0.3rem; top: -0.4rem; background-color:#FFF; border-radius:50%; z-index: 6;}
+.upload .img_li .file_mask{ display:none; position: absolute; z-index: 2; left: 0; top: 0; width: 100%; height: 100%;  opacity: 0;}
+.upload .add{ line-height: 2.5rem;}
+.upload input[type="file"]{ position: absolute; width: 100%; height: 100%; opacity: 0; left: 0; top: 0;}
+.upload .img_li:last-child{ margin-right:0;}
+
+.process_ul{ padding-left:10%; padding-right:10px; color:#999;}
+.process_ul>li{ padding-left:10%; padding-top:3px; border-left:1px solid #ccc; position:relative;}
+.process_ul>li span.dot{ width:14px; height:14px; background:#cccccc; position:absolute; top:0; left:-11.5px; border:4px solid #fff; border-radius:50%;}
+.process_ul>li:last-child{ border-left:1px #fff solid;}
+.process_ul>li>p{ height:1.35rem; overflow:hidden;}
+.process_ul>li.active{ color:#fd741c;}
+.process_ul>li.active:before{ border-color:#fd741c;}
+.process_ul>li.active span.dot{ background:#fd741c;}
+.process_ul>li.b_left{ border-color:#fd741c;}
+
+
+.record .js-sz-con{ overflow:hidden;}
+.record.active>.js-sz-btn>.icon-arrowzhankai:before{ content:'\e686';}
+
+.head_img img{ border:1px solid #fff; box-shadow:0px 0px 6px #AFAFAF;}
+.img .img_li{ position:relative; margin-right:15px;}
+.img .img_li:last-child{ margin-right:0;}
+.img .img_li .t-cell-css{ width:4.3rem; height:4.3rem; margin-bottom:15px; overflow:hidden; max-height:100%;}
+.img .img_li .add_photo{ line-height:2rem;}
+.img .img_li img{ vertical-align:middle; max-width:100%; max-height:100%;}

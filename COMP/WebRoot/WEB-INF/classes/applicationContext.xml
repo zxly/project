@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+		default-lazy-init="true">
+
+	<description>Spring公共配置</description>
+	<!-- 引入数据库连接文件 -->
+	<context:property-placeholder ignore-resource-not-found="true" location="classpath*:/application.properties" />	
+	
+	<!-- 数据源配置 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">  
+		<property name="driverClass" value="${jdbc.driver}"/>  
+	    <property name="jdbcUrl" value="${jdbc.url}"/>  
+	    <property name="user" value="${jdbc.username}"/>  
+	    <property name="password" value="${jdbc.password}"/>  
+	    <property name="maxPoolSize" value="${jdbc.pool.maxPoolSize}"/>  
+	    <property name="minPoolSize" value="${jdbc.pool.minPoolSize}"/>  
+	    <property name="initialPoolSize" value="${jdbc.pool.initialPoolSize}"/> 
+	    <property name="acquireIncrement" value="${jdbc.pool.acquireIncrement}"/> 
+	    <property name="maxIdleTime" value="${jdbc.pool.maxIdleTime}"/>  
+	    <property name="idleConnectionTestPeriod" value="${jdbc.pool.idleConnectionTestPeriod}"/>  
+	</bean>
+	
+	<!-- Jpa Entity Manager 配置 -->
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="packagesToScan" value="com.gl.club.entity,com.gl.club.common.base"/>
+		<property name="jpaDialect"> 
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect" /> 
+		</property> 
+		<property name="loadTimeWeaver"> 
+			<bean class="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver" /> 
+		</property> 
+		<property name="persistenceProvider"> 
+			<bean class="org.hibernate.ejb.HibernatePersistence"/><!--用于指定持久化实现厂商类--> 
+		</property>
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+<!--				<prop key="hibernate.use_sql_comments">true</prop>  -->
+				<prop key="hibernate.max_fetch_depth">4</prop>
+				<prop key="hibernate.jdbc.fetch_size">50</prop>
+				<prop key="hibernate.jdbc.batch_size">50</prop>
+				<prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 使用annotation 自动注册bean,并检查@Required,@Autowired的属性已被注入 -->
+	<context:component-scan base-package="com.gl.club.service.impl,com.gl.club.common">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+	</context:component-scan>
+	
+	<!-- Spring Data Jpa配置, 扫描base-package下所有继承于Repository<T,ID>的接口 -->
+ 	<jpa:repositories base-package="com.gl.club.dao,com.gl.club.common" 
+ 		transaction-manager-ref="transactionManager"  
+ 		factory-class="com.gl.club.common.base.repository.factory.BaseRepositoryFactoryBean" 
+ 		entity-manager-factory-ref="entityManagerFactory" />
+	
+	<!-- 事务管理器配置, Jpa单数据源事务 -->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory"/>
+	</bean>
+	
+	<!-- 使用annotation定义事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    
+    <!-- 定义aspectj -->
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+
+	<!-- hibernate validator -->
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+	
+	
+</beans>

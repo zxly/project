@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd"
+	default-lazy-init="true">
+	
+	<description>Shiro安全配置</description>	
+
+	<!--cookie管理-->
+	<bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">  
+	    <constructor-arg name="name" value="ShiroSession"/>
+	</bean>  
+
+	<!-- 項目自定义的Realm, 所有accountService依赖的dao都需要用depends-on声明 -->
+	<bean id="shiroDbRealm" class="com.gl.club.common.securitymanage.core.impl.ShiroDbRealmImpl">
+		<property name="bridgeService" ref="bridgeService"/>
+	</bean>
+
+	<!-- 权限管管理器 -->
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="shiroDbRealm" />
+		<!-- shiro的会话管理 -->
+		<property name="sessionManager" ref="sessionManager" />
+	</bean>
+	
+	<!-- 会话管理器 -->
+	<bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+		<property name="sessionValidationSchedulerEnabled" value="false" />
+		<!--自定义的session名称-->
+		<property name="sessionIdCookie" ref="sessionIdCookie"/> 
+		<!--globalSessionTimeout是会话存活时间(默认是30分钟) -->
+		<property name="globalSessionTimeout" value="3600000"/>
+	</bean>
+	
+	<!-- Shiro过滤器，这里没有自定义的过滤器配置-->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager" />
+		<!-- <property name="filters">  
+            <map>  
+                <entry key="simpleAuthc" value-ref="simpleAuthcFilter"/>
+                <entry key="guide" value-ref="guideFilter"/>
+                <entry key="simpleRoles" value-ref="simpleRolesAuthorizationFilter"/>
+                <entry key="simpleLogout" value-ref="simpleLogoutFilter"/>
+                <entry key="authorizationKey" value-ref="authorizationKeyFilter"/>
+                <entry key="simpleAnon" value-ref="simpleAnonFilter"/>
+                <entry key="aotuLogin" value-ref="aotuLoginFile"/>
+            </map>  
+        </property> -->
+		<property name="filterChainDefinitions">
+			<value>
+				/login/* = anon 				
+			</value>
+		</property>
+	</bean>
+</beans>

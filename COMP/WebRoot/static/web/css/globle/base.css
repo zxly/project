@@ -1,0 +1,14 @@
+/* ≥ı ºªØ */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody{margin:0; padding:0; border:0;}
+body{font:14px Microsoft YaHei,Tahoma,Arial,sans-serif; color:#333;}
+textarea { resize:none; }
+*img{display:block;}
+em,i{font-style:normal;}
+strong{font-weight: normal;}
+a{text-decoration:none; color:#333; font:12px Microsoft YaHei,Tahoma,Arial,sans-serif;}
+a:hover{color:#333; text-decoration:none;}
+ol, ul { list-style:none; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+.clearfix:after{content:""; display:block; visibility:hidden; height:0; clear:both;}
+.clearfix{zoom:1;}
+

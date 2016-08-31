@@ -1,0 +1,84 @@
+@CHARSET "UTF-8";
+.go_back{ display:block;}
+.v_m{ vertical-align:middle;}
+.v_b{ vertical-align:bottom;}
+.bg_gradient{background:-webkit-linear-gradient( top,#1a1a1f,#363638);}
+.header_tit{ width:70%; margin:0 auto;}
+.t_white{ color:#fff;}
+
+/** 个人中心 **/
+.t-css{ table-layout:fixed;}
+.user_info .dis_table,.user_info .dis_cell{ width:3.4rem; height:3.4rem;}
+t_a0{ color:#a0a0a0;}
+.wp13{ width:13%}
+.register{ padding:4px 8px; display:inline-block; font-size:1rem;}
+
+/** 领取成功  **/
+.ptb30rem{ padding:3rem 0;}
+.pt3rem{ padding-top:.3rem;}
+.inline_block{ display:inline-block;}
+.t_5fc052{ color:#5fc052;}
+.f_35{ font-size:3.5rem;}
+.pay_access>.btn{ padding:8px 0;}
+.later_on>.iconfont{ vertical-align:middle;}
+.wp48{ width:48%;}
+
+.t_normal{ font-weight:normal;}
+.shopper_img,.shopper_img>.t-cell-css{ width:8rem; height:4.8rem; border-radius:6px;}
+.shopper_img img{ max-width:8rem; max-height:4.8rem;}
+.shopper_info{ width:58%;}
+.shopper_address{ height:2.4rem; overflow:hidden;}
+
+
+/*** 交易管理  ***/
+.favourable_nav{ position:relative;}
+.nav_line{ position: absolute;left: 0; bottom: 0; -webkit-transition: all 0.5s; transition: all 0.5s; height: 2px; background: #fd741c; width:100%;}
+.favourable_nav > a{ display: block; width: 100%; float: left; text-align: center;}
+.favourable_nav > a.active{ color: #fb5a3e;}
+.favourable_list > div{ opacity: 0; display: none; } 
+.favourable_list > div.active{ opacity: 1; display: block; -webkit-animation: show 0.5s 0s ease-in-out forwards;animation: show 0.5s 0s ease-in-out forwards;} 
+
+.pro_img,.pro_img>.t-cell-css{ width:6.6rem; height:4.2rem; border-radius:6px;}
+.pro_img img{ max-width:6.6rem; max-height:4.2rem;}
+.pro_info{ width:65%;}
+.pro_name{ height:2.4rem; overflow:hidden; line-height:1.2rem;}
+.pro_info .btn{ font-size:.9rem; padding:4px 10px;}
+.mt6{ margin-top:6px;}
+
+.pro_info .btn_bd_orange,.pro_info .btn_bd_black{  border-radius:3px; font-size:.9rem; padding:3px 9px; }
+.pro_info .btn_bd_orange{border:1px solid #fd741c;color:#fd741c;}
+.pro_info .btn_bd_black{border:1px solid #666; color:#666;}
+.pro_info .btn_bd_orange:hover{ box-shadow:inset 2px 2px 5px rgba(253,116,28,.8);}
+.pro_info .btn_bd_black:hover{background:#eee;}
+
+
+/** 进度条  **/
+.status_bar>li{ color:#999;  width:25%; padding-left:.7rem; padding-top:.3rem; overflow:visible; height:3rem; -webkit-box-sizing:border-box; box-sizing:border-box;position:relative; }
+.status_bar>li span.f_08{ line-height:1rem; color:#ffc5a0; vertical-align:top;}
+.status_bar>.active{ color:#fff;  background:#93F; background:#fd741c;}
+.status_bar .active .triangle{width:0; height:0; border-width:1.8rem .8rem; border-right:0; border-style:solid; border-color: transparent transparent transparent #fff; position:absolute; right:-.8rem;top:-.3rem;}
+.status_bar  .active .triangle:before{ content:'';width:0; height:0; border-width:1.8rem .8rem; border-right:0; border-style:solid; border-color: transparent transparent transparent #fd741c; position:absolute; right:2px; top:-1.8rem;}
+.status_bar>li:nth-of-type(1){ z-index:4;}
+.status_bar>li:nth-of-type(2){ z-index:3;}
+.status_bar>li:nth-of-type(3){ z-index:2;}
+.status_bar>li:nth-of-type(4){ z-index:1;}
+
+.mr22rem{ margin-left:2.2rem;}
+.lh2rem{ line-height:2rem;}
+.tit_icon{ position:absolute; left:-2.2rem;}
+
+.coupon{ line-height:1.8rem;}
+.to_use{ padding:8px 0;}
+
+/*评星*/
+/*.eval_star .eval_li .star_p .iconfont{ padding: 0 4px; font-size: 1.2rem;}
+.eval_star .eval_li .star_p .iconfont.active{ color: #f39800;}
+.t_dc{ color:#dcdcdc;}
+*/
+.star{ width:10.5rem;height:1.7rem; background:url(../myImg/star_b.png) left center no-repeat; background-size:10.5rem 1.6rem;}
+.star_inner{width:80%; height:1.7rem; background:url(../myImg/star_t.png) left center no-repeat; overflow:hidden;background-size:10.5rem 1.6rem;}
+/*** 线下  ***/
+.fund_pay{ box-sizing:border-box; -webkit-box-sizing:border-box;}
+
+.alert_mask{ width:100%; height:100%; position:fixed; left:0; top:0; display:none;}
+.pop_wrap{ width:90%; position:fixed; left:50%; top:50%; margin:-80px 0 0 -45%; background:#fff; border-radius:5px; display:none;}

@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+/*头部*/
+header{ height: 3.143rem; line-height: 3.38; border-bottom: #fd741c solid 1px; text-align: center; color:#333;}
+
+/*主体*/
+.improve_bd .improve_bg{ width: 100%; background: #f5f5f5; height: 0.893rem;}
+.improve_bd_inpt input{ width: 95%; height:3.214rem; padding-left: 5%; display: block; background: #eee;}
+.improve_bd label{ display: block; line-height: 3.05;}
+.improve_bd_selt select{ float: left; height:2.07rem; padding-left: 2%; padding-right: 2%; line-height: 2.23; }
+.improve_city{ width: 32%;}
+.improve_bd_selt_contact,.improve_bd_selt_detail{ margin-top: 1rem; line-height: 2.32;}
+@media( min-width:350px){ .improve_detail textarea{ width: 96%; padding-left: 3.83%; padding-top: 0.5rem; height:5rem; resize: none;} }
+@media( min-width:320px){ .improve_detail textarea{ width: 96%; padding-left: 3.8%; padding-top: 0.5rem; height:5rem; resize: none;} }
+.improve_bd .improve_submit{ width: 100%; margin-top: 2.857rem; margin-bottom: 2.857rem; height: 2.5rem;}
+.gray{position:fixed;top:0;left:0;z-index:888;width:100%;background-color:rgba(0,0,0,.4);height:100%;display:none;}
+.popDiv{display:none;position:fixed;left:50%;top:35%;width:80%;height:6rem;margin:-4rem 0 0 -40%;text-align:center;z-index:999;background-color:#f8f8f8;font-size:16px;}
+.popDiv>div{height:3.8rem;}
+.popDiv>div>p{padding-top:5%;}
+.pp{width:80%;height:2rem;top:50%;margin:1rem 0 0 -40%;background-color:#f2f2f2;border-radius:5px;box-shadow: 1px 1px 1px #ccc; }
+.pp>div>p{padding:5px 0;font-weight:600;}

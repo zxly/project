@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+/*联盟商家和增加商家 图片上传公用样式*/
+.img_upload{position:relative;border-radius:3px;border:1px solid #ddd;}
+.img_upload input[type="file"]{ position: absolute; left: 0; top: 0; width:100%; background: none; height:100%; border:0;cursor:pointer; opacity:0; filter:alpha(opacity=0);font-family:Times;color:#fff;font-size:100px\9;}
+.upload_imgbox{top:0;left:0;background-color:#fff;}
+.show_cell img{display: block; max-width: 100%; max-height: 100%;width: auto;margin:0 auto;}
+
+/****** joint_venture.html 联盟商家 ******/
+
+.lh60{line-height:60px;}
+.he18{*height:18px;}
+.mt4{margin-top:4px;}
+.mt12{margin-top:12px;*margin-top:8px;}
+.mr60{margin-right:60px;}
+
+/*添加商家按钮*/
+.add_partner_btn{width:150px;background-color:#f8f8f8;*height:24px;}
+.add_partner_btn:hover{background-color:#eee;}
+
+/*图片上传*/
+.upload_photo_group li,.upload_photo_group .upload_imgbox,.upload_photo_group .show_cell{width:198px;height:60px;}
+.upload_photo_group li{margin-right:5px;}
+.upload_photo_group .add_icon{margin:16px 15px 0 50px}
+.upload_photo_group .word_tips{bottom:0;right:0;padding:10px 5px;}
+
+
+/*表单*/
+.btn_lightblue:hover{color:#fff;}
+.form_group .bdnone{border:0;outline:0;}
+.all_checked_label{display:block;height:28px;width:86px;}
+.all_checked_txt{width:44px;height:26px;line-height:26px;font-size:12px;text-align:center; cursor:pointer;}
+
+/*表格*/
+.table_join th{font-weight:bold;line-height:50px;}
+.table_join tr>td:first-child{text-align:left;}
+.table_join tbody tr:hover{color:#4279aa;}
+.table_join tbody tr:hover .bold_change{font-weight:bold;color:#4279aa;}
+.shop_log_pic{margin:0 auto;border:1px solid #ddd;}
+.shop_log_pic,.shop_log_pic .show_cell{width:86px;height:48px;}
+
+/****** Add_shop.html 添加联盟商家 ******/
+.m20lr{margin:0 -20px;}
+.t_orange2{color:#ff7200;}
+.br8{border-radius:8px;}
+.mt2{margin-top:2px;}
+
+/*面包屑*/
+.breadcrumb{height:47px;line-height:47px;border-bottom:1px solid #e6e6e6;}
+.breadcrumb a{line-height:47px;}
+.breadcrumb > .active > a{color:#2e6291;}
+
+/*添加联盟商家表单*/
+.add_shop_form .form_group{padding-left:100px;}
+.add_shop_form .pl130{padding-left:130px;}
+
+/*图片上传*/
+.shop_upload_pic .upload_imgbox,.shop_upload_pic .show_cell{width:228px;height:128px;}
+.img_upload .img_upload_btn{width: 110px;height: 100%;*height:30px;border: 0;padding-left: 20px;background:url(../manageImg/img_upload.jpg) 15px center no-repeat;}
+.shop_upload_pic .img_upload,.shop_upload_pic input[type="file"]{width: 110px;height: 30px;overflow:hidden;}
+
+/*提示框三角*/
+.add_shop_form .word_tips{background-color:#ffffe5;border-color:#ffcc7f;}
+.add_shop_form .word_tips:before,.add_shop_form .word_tips:after{ position: absolute; top:-14px; left: 46px; content: ''; border-top: 0; border-bottom: 14px solid #ffcc7f; border-left: 11px solid transparent; border-right: 11px solid transparent; }
+.add_shop_form .word_tips:after {top: -12px;border-bottom-color: #ffffe5;}
+
+/*确认按钮*/
+.add_true_btn{display:block;width:48px;height:16px;margin:35px 0 0 204px;}
+
+
+/*弹框*/
+.pop_mask{ width:100%; height:100%; position:fixed; top:0; left:0; background:#fff; opacity: 0; filter:alpha(opacity=0); z-index:1000; display:none; }
+.pop_small{width:400px;margin-left:-200px;}
+
+
+.pull_down { display:inline-block;width:320px;position:relative; line-height:32px; text-align:left; border:1px solid #ccc; background:#fff;}
+.pull_down_text {padding-right:36px;}
+.pull_down_text,.pull_down_select li { padding:0 20px 0 10px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; cursor:pointer;}
+.pull_down span { position:absolute;top:0px; right:1px; display:block; width:30px; height:100%; *background:url(../../image/globle/panel-sub-bg-1.png) center no-repeat;}
+.pull_down span:before{content: "\e63b";  font-family:"iconfont" !important; width:100%; height:100%; text-align:center; display:inline-block;}
+.pull_down_select { position:absolute; top:32px; left:-1px; width:100%; max-height:200px; overflow:auto; background-color:#fff; border:1px solid #ccc; display:none;z-index:1;}
+.pull_down_select li:hover { background-color:#f8f8f8;}
+
+.cate_type{width:230px}

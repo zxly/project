@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* 帐号信息CSS */
+.iconfont{ vertical-align:top;}
+.go_back{ display:block; top:0;}
+.borderbox{ box-sizing:border-box;}
+.btn_sm{ padding:5px 15px;}
+.btn_white{ border:1px #fd741c solid; background:#fff; border-radius:3px; font-size:1.1rem; color:#fd741c; font-size:0.9rem;}
+.btn_organe{ border:1px #fd741c solid; font-size:0.9rem;}
+.account_fund{ line-height:2.5rem;}
+.f_56{ color:#56ad51;}
+.f_55{ color:#55c8fe;}
+.f_red{ color:#ff2323;}
+.bg_f4f5f9{ background:#f4f5f9;}
+.text_normal{ font-weight:normal;}
+.bd_ee_b{ border-bottom:1px solid #eee;}
+.input_date{border:#ccc solid 1px;padding-left:10px;height: 2.2rem;position: relative;top: -2px;z-index: 10; width:40%;}
+.btn-search{ height:2.2rem; padding:0 20px;}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="profiler.settings.instrument.empty.methods">true</entry>
+<entry key="ProfilerCPUSettings_profile_runnables">true</entry>
+<entry key="ProfilerCPUSettings_filter_type">2</entry>
+<entry key="ProfilerMemorySettings_track_every">10</entry>
+<entry key="ProfilerMemorySettings_mode">4</entry>
+<entry key="ProfilerCPUSettings_root_classes">com.gl.club.action.mobile.course.**
+com.gl.club.action.mobile.game.**
+com.gl.club.action.mobile.goods.**
+com.gl.club.action.mobile.index.**
+com.gl.club.action.mobile.merchant.**
+com.gl.club.action.mobile.order.**
+com.gl.club.action.mobile.sign.**
+com.gl.club.action.mobile.vipUser.**
+com.gl.club.action.mobile.wx.**
+com.gl.club.action.web.byAdvertise.**
+com.gl.club.action.web.categoryInfo.**
+com.gl.club.action.web.coupons.**
+com.gl.club.action.web.courseGame.**
+com.gl.club.action.web.golfCourse.**
+com.gl.club.action.web.goods.**
+com.gl.club.action.web.index.**
+com.gl.club.action.web.login.**
+com.gl.club.action.web.merchant.**
+com.gl.club.action.web.navigation.**
+com.gl.club.action.web.openDate.**
+com.gl.club.action.web.showAdvertise.**
+com.gl.club.action.web.signOrder.**
+com.gl.club.action.web.sysUser.**
+com.gl.club.action.web.userCoupons.**
+com.gl.club.action.web.vipLeavel.**
+com.gl.club.action.web.vipUser.**
+com.gl.club.action.web.wxAccount.**
+com.gl.club.common.base.action.**
+com.gl.club.common.base.entity.**
+com.gl.club.common.base.repository.**
+com.gl.club.common.base.service.**
+com.gl.club.common.base.vo.**
+com.gl.club.common.exception.**
+com.gl.club.common.interceptor.**
+com.gl.club.common.listener.**
+com.gl.club.common.securitymanage.bridge.**
+com.gl.club.common.securitymanage.core.**
+com.gl.club.common.tools.**
+com.gl.club.dao.**
+com.gl.club.entity.**
+com.gl.club.service.**
+com.gl.club.vo.**
+</entry>
+<entry key="ProfilerCPUSettings_filter_value">com.gl.club.action.mobile.course.*,
+com.gl.club.action.mobile.game.*,
+com.gl.club.action.mobile.goods.*,
+com.gl.club.action.mobile.index.*,
+com.gl.club.action.mobile.merchant.*,
+com.gl.club.action.mobile.order.*,
+com.gl.club.action.mobile.sign.*,
+com.gl.club.action.mobile.vipUser.*,
+com.gl.club.action.mobile.wx.*,
+com.gl.club.action.web.byAdvertise.*,
+com.gl.club.action.web.categoryInfo.*,
+com.gl.club.action.web.coupons.*,
+com.gl.club.action.web.courseGame.*,
+com.gl.club.action.web.golfCourse.*,
+com.gl.club.action.web.goods.*,
+com.gl.club.action.web.index.*,
+com.gl.club.action.web.login.*,
+com.gl.club.action.web.merchant.*,
+com.gl.club.action.web.navigation.*,
+com.gl.club.action.web.openDate.*,
+com.gl.club.action.web.showAdvertise.*,
+com.gl.club.action.web.signOrder.*,
+com.gl.club.action.web.sysUser.*,
+com.gl.club.action.web.userCoupons.*,
+com.gl.club.action.web.vipLeavel.*,
+com.gl.club.action.web.vipUser.*,
+com.gl.club.action.web.wxAccount.*,
+com.gl.club.common.base.action.*,
+com.gl.club.common.base.entity.*,
+com.gl.club.common.base.repository.*,
+com.gl.club.common.base.service.*,
+com.gl.club.common.base.vo.*,
+com.gl.club.common.exception.*,
+com.gl.club.common.interceptor.*,
+com.gl.club.common.listener.*,
+com.gl.club.common.securitymanage.bridge.*,
+com.gl.club.common.securitymanage.core.*,
+com.gl.club.common.tools.*,
+com.gl.club.dao.*,
+com.gl.club.entity.*,
+com.gl.club.service.*,
+com.gl.club.vo.*</entry>
+<entry key="profiler.settings.istrument.getter.setter.methods">true</entry>
+<entry key="myeclipse.profiling.mode">0</entry>
+<entry key="ProfilerMemorySettings_stacktraces">-1</entry>
+</properties>

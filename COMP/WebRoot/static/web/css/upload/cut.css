@@ -1,0 +1,61 @@
+/*上传图片*/
+/* .upload_div_1{background: #e3e3e3;border: 1px dashed #aaa;width:auto;max-width:550px; height:auto;margin:30px auto;} */
+.upload_div_1 {
+  background: #e3e3e3;
+  border: 1px dashed #aaa;
+  width: 600px;
+  height: 360px;
+  margin-top:-22px;
+}
+/* .upload_div_1 .originalImg{max-width:100%;height:auto; display:block; margin:0px auto;} */
+.upload_div_1 .originalImg {
+  max-width: 600px;
+  max-height: 360px;
+}
+#preview-pane {
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  top: 80px;
+  right: -280px;
+  padding: 6px;
+  border: 1px rgba(0,0,0,.4) solid;
+  background-color: white;
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* The Javascript code will set the aspect ratio of the crop
+   area based on the size of the thumbnail preview,
+   specified here */
+#preview-pane .preview-container {
+  width: 250px;
+  height: 85px;
+  overflow: hidden;
+}
+
+.upload_img_pop{ position:fixed;width:850px; height:650px; z-index:1000;left:50%;top:50%; margin-left:-425px; margin-top:-325px; border:1px solid #aaa; background-color:#fff;box-shadow:0 0 8px #999;}
+.upload_head{ height:60px; line-height:60px; padding-left:30px; font-weight:bold; font-size:14px; border-bottom:1px solid #aaa;}
+
+.upload_body{width:780px; margin:0 auto; height:450px;}
+.ad-upload-div{padding:20px 0; height:60px;}
+
+.ad-upload-a1 {display:block; position:relative; width:95px; height:30px;border:1px solid #a0a0a0;border-radius:4px; overflow:hidden;margin-top:5px;
+FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ffffff,endColorStr=#cccccc); /*IE*/ 
+background:-moz-linear-gradient(top,#ffffff,#cccccc);/*火狐*/ 
+background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#ffffff), to(#cccccc));/*谷歌*/ 
+}
+.ad-upload-a1 span {display:block;width:93px; height:30px; line-height:30px; text-align:center; position:absolute; top:0; left:0;font-family:\5B8B\4F53; font-size:16px; color:#010101;}
+.ad-upload-a1 input {position:absolute; top:0; left:0; font-size:100px; -moz-opacity: 0;  -khtml-opacity: 0;  opacity:0;  
+filter:alpha(opacity=0);  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0); }
+
+.upload_footer{width:300px; margin:0 auto; height:50px;}
+.upload_footer a{ background-color:#2e6291; display:block;width:120px; height:50px; line-height:50px; text-align:center;border-radius:4px; float:left; color:#fff; font-size:16px;}
+.upload_footer a.confirm_btn{ float:right;}
+.upload_footer a:hover{background-color:#014c8f; text-decoration:none;}

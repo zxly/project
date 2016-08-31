@@ -1,0 +1,45 @@
+/*优惠活动*/
+.r0{ right: 0;}
+.pr4{ padding-right: 4px;}
+.pb60{ padding-bottom: 60px;}
+.h150{ height: 150px;}
+.type_act{ background-color: #4279aa;}
+.border0{ border: 0!important;}
+.promotion_img{ width: 78px; height:46px;}
+.table_promotion td a.t_999:hover{ color:#999;};
+.pop_check{ width: 500px;}
+.pop_record{ width: 850px;}
+.table th{ background: #2e6291; color: white;}
+.table tr{ background: #e3e8ef; color: #2e6291;}
+.table td{ border: 0;}
+.code_box{ border-radius: 6px; top: 27px; z-index:2;display: none;}
+.code{ width: 132px; height: 132px;}
+.code_box:before,.code_box:after{ content: ''; width:0; height:0; position: absolute; border-top: 0; border-width: 8px; border-style:solid; top: -11%; left:75%;}
+.code_box:before{ border-color:transparent transparent #5f97fb transparent;}
+.code_box:after{ border-color:transparent transparent #fff transparent; top: -10%;}
+.code_see:hover .code_box{ display: block;}
+
+/*排序弹出层*/
+.act{background:#f8f8f8;}
+.r5{right:5px;}
+.plr3{ padding-left: 3px; padding-right: 3px;}
+.pop_rank{ width: 1000px;}
+.popup_wrap{ margin-left: -500px;}
+.rank_store,.rank_coupon{ height:36px; overflow: hidden;}
+.rank_con{ cursor: pointer;}
+.rank_box{ height: 500px; overflow: auto;}
+.rank_center{ padding-top: 200px; height:300px;}
+.btn_right,.btn_left{ position: relative; width: 40px; height: 20px; margin-left:40px;background: #4279aa; cursor: pointer;}
+.btn_left{margin-left: 60px; margin-top: 40px;}
+.btn_right:before,.btn_left:before{ position: absolute; content:"";width:0; height:0; border-width:25px; border-style: solid; border-color: transparent transparent transparent #4279aa; left: 100%; top: -72%;}
+.btn_left:before{ border-color:transparent #4279aa transparent transparent; left:-125%;}
+
+/*分页覆盖样式*/
+.paging > span,.paging >  a { margin-right:1px;}
+.paging > .hoverbd {padding:3px 1px;}
+.paging > .page_num {padding:0;}
+.paging input[type="text"] {width:25px;}
+.paging > .page_submit {padding:2px; }
+.paging > .now_page { padding: 0;}
+
+.pop_mask {width: 100%;height: 100%;position: fixed;top: 0;left: 0;background: #000;opacity: 0.3;filter: alpha(opacity=30);z-index: 1000; display: none;}
